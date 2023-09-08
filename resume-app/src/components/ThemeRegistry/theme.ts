@@ -11,8 +11,11 @@ export const lightTheme = responsiveFontSizes(createTheme({
     palette: {
       mode: 'light',
       primary: {
-          main: '#FFA500'
+          main: '#FF6A38'
       },
+      secondary: {
+        main: '#AE887D'
+      }
     },
     typography: {
       fontFamily: roboto.style.fontFamily,
@@ -34,8 +37,11 @@ export const lightTheme = responsiveFontSizes(createTheme({
     palette: {
       mode: 'dark',
       primary: {
-          main: '#FFA500'
+          main: '#FF6A38'
       },
+      secondary: {
+        main: '#AE887D'
+      }
     },
     typography: {
       fontFamily: roboto.style.fontFamily,
