@@ -10,7 +10,7 @@ import { lightTheme, darkTheme } from './theme';
 export default function ThemeRegistry({ children }: { children: React.ReactNode }) {
   return (
     <NextAppDirEmotionCacheProvider options={{ key: 'mui' }}>
-        <ThemeProvider theme={lightTheme}>
+        <ThemeProvider theme={darkTheme}>
           <CssBaseline />
           {children}
         </ThemeProvider>

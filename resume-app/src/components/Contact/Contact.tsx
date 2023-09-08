@@ -1,11 +1,11 @@
 import { Box, Typography } from "@mui/material";
 
-export default function MobileHome() {
+export default function Contact() {
     return (
         <>
-        <Box sx={{ display: 'flex', justifyContent: 'center', padding: '3em 0em 0 0em' }}>
+            <Box sx={{ display: 'flex', justifyContent: 'center', padding: '5em 10em 0 10em' }}>
                 <Typography variant="h1" align="center">
-                    Home Mobile
+                    Contact Me
                 </Typography>
             </Box>
         </>
