@@ -1,4 +1,3 @@
-import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import ThemeRegistry from '@/components/ThemeRegistry/ThemeRegistry';
@@ -17,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body >
+      <body>
         <ThemeRegistry>
           {children}
         </ThemeRegistry>
