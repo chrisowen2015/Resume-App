@@ -1,5 +1,5 @@
 import { Roboto } from 'next/font/google';
-import { createTheme, responsiveFontSizes } from '@mui/material/styles';
+import { Shadows, createTheme, responsiveFontSizes } from '@mui/material/styles';
 
 const roboto = Roboto({
   weight: ['300', '400', '500', '700'],
@@ -43,6 +43,7 @@ export const lightTheme = responsiveFontSizes(createTheme({
         main: '#AE887D'
       }
     },
+    shadows: Array(25).fill('none') as Shadows,
     typography: {
       fontFamily: roboto.style.fontFamily,
     },
