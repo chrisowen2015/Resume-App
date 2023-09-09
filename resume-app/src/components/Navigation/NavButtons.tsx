@@ -43,7 +43,7 @@ export default function NavButtons() {
                     xl: 'none',
                 }
             }}>
-                <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} elevation={100}>
+                <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} elevation={20}>
                     <BottomNavigation
                         showLabels
                         value={value}
