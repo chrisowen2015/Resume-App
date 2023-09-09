@@ -1,5 +1,3 @@
-'use client';
-
 import { Box, Fab, Typography } from "@mui/material";
 import Image from "next/image";
 import Spacer from "../shared/spacer";
