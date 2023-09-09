@@ -6,9 +6,11 @@ import { Home } from "@mui/icons-material";
 import { Person } from "@mui/icons-material";
 import { Mail } from "@mui/icons-material";
 
+import { usePathname } from 'next/navigation';
 
 export default function NavButtons() {
-    const [value, setValue] = useState(0);
+    const pathName = usePathname();
+    const [value, setValue] = useState(pathName === '/' ? 0 : pathName === '/about' ? 1 : 2);
 
     return (
         <>
@@ -22,13 +24,13 @@ export default function NavButtons() {
                 }
             }}>
                 <Box sx={{ display: 'flex', flexDirection: 'column', height: '100vh', justifyContent: 'center', alignItems: 'center' }}>
-                    <Fab color="primary" href="/" >
+                    <Fab href="/" sx={{ backgroundColor: (value == 0 ? "#FF6A38" : "rgba(255, 255, 255, 0.12)") }} >
                         <Home fontSize="large" />
                     </Fab>
-                    <Fab color="primary" sx={{ margin: 3 }} href="/" >
+                    <Fab href="/about" sx={{ margin: 3, backgroundColor: (value == 1 ? "#FF6A38" : "rgba(255, 255, 255, 0.12)") }}>
                         <Person fontSize="large" />
                     </Fab>
-                    <Fab color="primary" href="/" >
+                    <Fab href="/" sx={{ backgroundColor: (value == 2 ? "#FF6A38" : "rgba(255, 255, 255, 0.12)") }}>
                         <Mail fontSize="large" />
                     </Fab>
                 </Box>
@@ -52,8 +54,8 @@ export default function NavButtons() {
                         }}
                         sx={{ paddingBottom: '1em' }}
                     >
-                        <BottomNavigationAction label="Home" icon={<Home fontSize='large' />} />
-                        <BottomNavigationAction label="About Me" icon={<Person fontSize='large' />} />
+                        <BottomNavigationAction label="Home" icon={<Home fontSize='large' />} href="/" />
+                        <BottomNavigationAction label="About Me" icon={<Person fontSize='large' />} href="/about" />
                         <BottomNavigationAction label="Contact Me" icon={<Mail fontSize='large' />} />
                     </BottomNavigation>
                 </Paper>
