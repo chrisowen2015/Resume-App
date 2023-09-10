@@ -6,11 +6,14 @@ import { Home } from "@mui/icons-material";
 import { Person } from "@mui/icons-material";
 import { Mail } from "@mui/icons-material";
 
+import { useTheme } from '@mui/material';
+
 import { usePathname } from 'next/navigation';
 
 export default function NavButtons() {
     const pathName = usePathname();
     const [value, setValue] = useState(pathName === '/' ? 0 : pathName === '/about' ? 1 : 2);
+    const theme = useTheme();
 
     return (
         <>
@@ -23,14 +26,14 @@ export default function NavButtons() {
                     xl: 'block',
                 }
             }}>
-                <Box sx={{ display: 'flex', flexDirection: 'column', height: '100vh', justifyContent: 'center', alignItems: 'center' }}>
-                    <Fab href="/" sx={{ backgroundColor: (value == 0 ? "#FF6A38" : "rgba(255, 255, 255, 0.12)") }} >
+                <Box sx={{ height: '100vh', position: 'fixed', right: '10px', overflowY: 'auto', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+                    <Fab href="/" sx={{ backgroundColor: (value == 0 ? theme.palette.primary.main : theme.palette.action.disabled) }} >
                         <Home fontSize="large" />
                     </Fab>
-                    <Fab href="/about" sx={{ margin: 3, backgroundColor: (value == 1 ? "#FF6A38" : "rgba(255, 255, 255, 0.12)") }}>
+                    <Fab href="/about" sx={{ margin: 3, backgroundColor: (value == 1 ? theme.palette.primary.main : theme.palette.action.disabled) }}>
                         <Person fontSize="large" />
                     </Fab>
-                    <Fab href="/" sx={{ backgroundColor: (value == 2 ? "#FF6A38" : "rgba(255, 255, 255, 0.12)") }}>
+                    <Fab href="/" sx={{ backgroundColor: (value == 2 ? theme.palette.primary.main : theme.palette.action.disabled) }}>
                         <Mail fontSize="large" />
                     </Fab>
                 </Box>
