@@ -33,7 +33,7 @@ export default function NavButtons() {
                     <Fab href="/about" sx={{ margin: 3, backgroundColor: (value == 1 ? theme.palette.primary.main : theme.palette.action.disabled) }}>
                         <Person fontSize="large" />
                     </Fab>
-                    <Fab href="/" sx={{ backgroundColor: (value == 2 ? theme.palette.primary.main : theme.palette.action.disabled) }}>
+                    <Fab href="/contact" sx={{ backgroundColor: (value == 2 ? theme.palette.primary.main : theme.palette.action.disabled) }}>
                         <Mail fontSize="large" />
                     </Fab>
                 </Box>
