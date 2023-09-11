@@ -30,7 +30,7 @@ export default function MobileContact() {
 
                     <Typography variant="h6" sx={{}}>
                         Looking for a frontend developer to bring fresh ideas to your team?
-                        I'm always looking for new opportunities to learn and grow and contribute to great projects.
+                        I&apos;m always looking for new opportunities to learn and grow and contribute to great projects.
                         Feel free to reach out to me with any questions or comments you may have!
                     </Typography>
 
