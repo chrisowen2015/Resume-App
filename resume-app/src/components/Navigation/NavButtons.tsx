@@ -48,18 +48,19 @@ export default function NavButtons() {
                     xl: 'none',
                 }
             }}>
-                <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} elevation={20}>
+                <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }}>
                     <BottomNavigation
                         showLabels
                         value={value}
                         onChange={(event, newValue) => {
                             setValue(newValue);
                         }}
-                        sx={{ paddingBottom: '1em' }}
+                        sx={{ padding: '1em' }}
+                        component={Paper}
                     >
                         <BottomNavigationAction label="Home" icon={<Home fontSize='large' />} href="/" />
                         <BottomNavigationAction label="About Me" icon={<Person fontSize='large' />} href="/about" />
-                        <BottomNavigationAction label="Contact Me" icon={<Mail fontSize='large' />} />
+                        <BottomNavigationAction label="Contact Me" icon={<Mail fontSize='large' />} href="/contact" />
                     </BottomNavigation>
                 </Paper>
             </Box>
