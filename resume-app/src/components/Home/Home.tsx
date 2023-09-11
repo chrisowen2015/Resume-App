@@ -12,11 +12,11 @@ export default function Home() {
             <Box sx={{ width: '100%', height: '100vh', display: 'flex', justifyContent: 'space-between', }}>
                 <div style={{ width: '40%', position: 'relative', margin: '50px 0 50px 50px' }}>
                     <Image src="/images/chris-owen.jpg"
-                        objectFit="cover"
                         alt="Chris Owen"
                         fill
                         priority
-                        style={{ borderRadius: 50 }}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        style={{ borderRadius: 50, objectFit: 'cover' }}
                     />
                 </div>
                 <Box sx={{ width: '60%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>

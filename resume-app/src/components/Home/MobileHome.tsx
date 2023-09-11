@@ -12,6 +12,7 @@ export default function MobileHome() {
                         alt="Chris Owen"
                         height={300}
                         width={300}
+                        priority
                         style={{ borderRadius: '50%' }} />
                 </div>
 

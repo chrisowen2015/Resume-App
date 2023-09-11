@@ -55,6 +55,7 @@ export default function MobileAbout() {
                             alt="Chris Owen"
                             height={250}
                             width={250}
+                            priority
                             style={{ borderRadius: '50%' }} />
                     </div>
 
