@@ -16,7 +16,7 @@ export const lightTheme = responsiveFontSizes(createTheme({
       main: '#FF6A38'
     },
     secondary: {
-      main: '#AE887D'
+      main: '#014FD7'
     }
   },
   typography: {
@@ -42,7 +42,7 @@ export const darkTheme = responsiveFontSizes(createTheme({
       main: '#FF6A38'
     },
     secondary: {
-      main: '#AE887D'
+      main: '#014FD7'
     }
   },
   shadows: Array(25).fill('none') as Shadows,

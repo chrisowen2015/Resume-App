@@ -50,7 +50,7 @@ export default function Experience({ dates, title, company, url, description }: 
                     <Typography color="secondary" variant="h6" fontWeight={500}>
                         {
                             url ?
-                                <Link href={url} style={{ color: 'inherit' }}>
+                                <Link href={url} style={{ color: 'inherit' }} underline="hover">
                                     {company}
                                 </Link>
                                 :
