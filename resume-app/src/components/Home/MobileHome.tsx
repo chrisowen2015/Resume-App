@@ -1,4 +1,4 @@
-import { Box, Typography, Fab } from "@mui/material";
+import { Box, Typography, Button } from "@mui/material";
 import Image from "next/image";
 import Spacer from "../shared/spacer";
 import { Download } from "@mui/icons-material";
@@ -35,12 +35,12 @@ export default function MobileHome() {
                     <Spacer height={40} />
 
                     <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-                        <Fab variant="extended" color="primary" sx={{ p: 4, borderRadius: 10 }} >
+                        <Button variant="contained" color="primary" component="a" href="/documents/Chris_Owen_Resume.pdf" download={true} sx={{ p: '1em 1em 1em 1.5em', borderRadius: 10 }} >
                             <Typography variant="h6">
                                 Download Resume &nbsp;
                             </Typography>
                             <Download fontSize="large" />
-                        </Fab>
+                        </Button>
                     </Box>
 
                     <Spacer height={60} />

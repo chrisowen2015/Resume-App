@@ -38,7 +38,7 @@ export default function Home() {
 
                             <Spacer height={40} />
 
-                            <Fab variant="extended" color="primary" sx={{ p: 4, borderRadius: 10 }} >
+                            <Fab variant="extended" color="primary" sx={{ p: 4, borderRadius: 10 }} component="a" href="/documents/Chris_Owen_Resume.pdf" download={true} >
                                 <Typography variant="h6">
                                     Download Resume &nbsp;
                                 </Typography>
