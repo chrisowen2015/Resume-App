@@ -1,5 +1,5 @@
 
-import { Box } from '@mui/material';
+import { Box, Slide } from '@mui/material';
 import MobileContact from '@/components/Contact/MobileContact';
 import Contact from '@/components/Contact/Contact';
 
@@ -14,7 +14,10 @@ export default function Page() {
                 }
             }}>
                 {/* The desktop layout to be displayed on medium and larger devices */}
-                <Contact />
+
+                <Slide direction="down" in={true} timeout={750} style={{ width: '100%' }} mountOnEnter unmountOnExit appear={true}>
+                    <Contact />
+                </Slide>
             </Box>
             <Box sx={{
                 display: {

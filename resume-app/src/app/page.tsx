@@ -1,6 +1,6 @@
-import { Box } from '@mui/material';
+import { Box, Slide } from '@mui/material';
 import Home from '@/components/Home/Home';
-import  MobileHome from '@/components/Home/MobileHome';
+import MobileHome from '@/components/Home/MobileHome';
 
 export default function Page() {
   return (
@@ -13,8 +13,10 @@ export default function Page() {
         }
       }}>
         {/* The desktop layout to be displayed on medium and larger devices */}
-        <Home />
-      </Box>
+        <Slide direction="down" in={true} timeout={750} style={{ width: '100%' }} mountOnEnter unmountOnExit appear={true} >
+          <Home />
+        </Slide>
+      </Box >
       <Box sx={{
         display: {
           xs: 'block',
