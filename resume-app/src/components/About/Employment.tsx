@@ -15,7 +15,7 @@ const employmentHistory = [
         title: "SENIOR SOFTWARE DEVELOPER",
         company: "CREATIVE NOTE",
         url: "https://www.creativenote.com/",
-        description: "",
+        description: "Built and maintained applications using .NET Blazor, Next.js 13 React, and CMS tools. Developed libraries to integrate modern applications with legacy systems. Helped improve standard design, development practices, and code quality.",
     },
     {
         dates: "JAN 2022 - JAN 2023",
