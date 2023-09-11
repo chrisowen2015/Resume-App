@@ -137,7 +137,7 @@ export default function MobileAbout() {
 
                     <Spacer height={30} />
 
-                    <Box sx={{ padding: 4 }}>
+                    <Box sx={{ padding: 4, paddingBottom: 0 }}>
                         <Employment />
                     </Box>
 
