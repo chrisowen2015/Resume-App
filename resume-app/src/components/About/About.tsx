@@ -41,7 +41,7 @@ export default function About() {
 
                 <Box sx={{ display: 'flex', justifyContent: 'center' }} >
                     <Typography variant="h1" fontWeight={800}>
-                        ABOUT &nbsp;
+                        ABOUT&nbsp;
                     </Typography>
                     <Typography color="primary" variant="h1" fontWeight={800} >
                         ME

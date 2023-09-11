@@ -21,7 +21,7 @@ export default function Contact() {
 
                     <Box sx={{ display: 'flex', justifyContent: 'center' }} >
                         <Typography variant="h1" fontWeight={800}>
-                            CONTACT &nbsp;
+                            CONTACT&nbsp;
                         </Typography>
                         <Typography color="primary" variant="h1" fontWeight={800} >
                             ME
@@ -69,12 +69,12 @@ export default function Contact() {
                                     <EmailIcon color="primary" sx={{ marginRight: '15px', fontSize: 45 }} />
                                     <span>
                                         <Typography variant="h5" fontWeight={600} color="secondary">
-                                            EMAIL ME 
+                                            EMAIL ME
                                         </Typography>
 
                                         <Spacer height={10} />
 
-                                        <Typography variant="h6" fontWeight={600}  sx={{}}>
+                                        <Typography variant="h6" fontWeight={600} sx={{}}>
                                             chrisowen2015@gmail.com
                                         </Typography>
                                     </span>

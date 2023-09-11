@@ -14,7 +14,7 @@ const employmentHistory = [
         dates: "JAN 2023 - PRESENT",
         title: "SENIOR SOFTWARE DEVELOPER",
         company: "CREATIVE NOTE",
-        url: "https://www.creativenote.com/",
+        url: "http://www.creativenote.com/",
         description: "Built and maintained applications using .NET Blazor, Next.js 13 React, and CMS tools. Developed libraries to integrate modern applications with legacy systems. Helped improve standard design, development practices, and code quality.",
     },
     {
@@ -37,7 +37,7 @@ export default function Employment() {
     const theme = useTheme();
 
     return (
-        <Box sx={{ width: '100%', }} >
+        <Box sx={{ width: '100%', marginLeft: '1em' }} >
             {
                 employmentHistory.map((job, index) => (
                     <Experience key={index} dates={job.dates} title={job.title} company={job.company} url={job.url} description={job.description} />

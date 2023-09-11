@@ -54,13 +54,12 @@ export default function ContactForm() {
                     }
                 }}>
                     <Tooltip title="Send Message" placement="top" >
-                        <Fab variant="extended" color="primary" sx={{ width: '250px' }}>
-                            <Typography variant="h6" fontWeight={500} sx={{ paddingRight: '10px' }} >
+                        <Fab variant="extended" color="primary" sx={{ p: 4, borderRadius: 10 }} component="a" href="/documents/Chris_Owen_Resume.pdf" download={true} >
+                            <Typography variant="h6">
                                 Send Message &nbsp;
                             </Typography>
-                            <Send fontSize="large" sx={{ mr: 1, postition: 'fixed', right: 0 }} />
+                            <Send fontSize="large" />
                         </Fab>
-
                     </Tooltip>
                 </Box>
             </Box>
