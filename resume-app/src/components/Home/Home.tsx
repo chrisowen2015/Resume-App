@@ -23,7 +23,7 @@ export default function Home() {
                     <Box sx={{ maxWidth: '700px', display: 'flex', justifyContent: "center", alignItems: 'center', padding: '5em' }}>
                         <Box>
                             <Typography variant="h2" color="primary" sx={{ fontWeight: 700 }}>
-                                I'M CHRIS OWEN
+                                I&apos;M CHRIS OWEN
                             </Typography>
                             <Typography variant="h3" sx={{ fontWeight: 700 }}>
                                 SOFTWARE DEVELOPER
@@ -32,7 +32,7 @@ export default function Home() {
                             <Spacer height={40} />
 
                             <Typography variant="h6" >
-                                I'm a Los Angeles based software developer with a passion for creating beautiful, functional, and accessible web applications.
+                                I&apos;m a Los Angeles based software developer with a passion for creating beautiful, functional, and accessible web applications.
                                 I am passionate about learning new technologies and working with others to create amazing products.
                             </Typography>
 
