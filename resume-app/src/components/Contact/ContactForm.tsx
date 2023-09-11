@@ -1,6 +1,6 @@
 'use client';
 
-import { Box, Paper, TextField, Fab, Typography, Tooltip } from '@mui/material';
+import { Box, Paper, TextField, Fab, Typography, Tooltip, Button } from '@mui/material';
 import Spacer from '@/components/shared/spacer';
 import { Send } from '@mui/icons-material';
 import { useState } from 'react';
@@ -54,12 +54,12 @@ export default function ContactForm() {
                     }
                 }}>
                     <Tooltip title="Send Message" placement="top" >
-                        <Fab variant="extended" color="primary" sx={{ p: 4, borderRadius: 10 }} component="a" href="/documents/Chris_Owen_Resume.pdf" download={true} >
+                        <Button variant="contained" color="primary" sx={{ p: '1em 1em 1em 1.5em', borderRadius: 10 }} >
                             <Typography variant="h6">
                                 Send Message &nbsp;
                             </Typography>
                             <Send fontSize="large" />
-                        </Fab>
+                        </Button>
                     </Tooltip>
                 </Box>
             </Box>
