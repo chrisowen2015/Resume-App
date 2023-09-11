@@ -27,7 +27,7 @@ export default function RootLayout({
               md: 'flex',
               lg: 'flex',
               xl: 'flex',
-            }, justifyContent: 'space-between'
+            },
           }}>
             <Box sx={{ flexGrow: 1 }}>
               {children}

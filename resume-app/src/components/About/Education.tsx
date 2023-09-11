@@ -13,9 +13,9 @@ const educations = [
     },
     {
         dates: "2022",
-        title: "BACHELOR DEGREE",
+        title: "BACHELOR'S DEGREE",
         company: "CSU NORTHRIDGE",
-        description: "BACHELORS OF SCIENCE IN COMPUTER SCIENCE",
+        description: "BACHELOR'S OF SCIENCE IN COMPUTER SCIENCE",
     }
 ]
 

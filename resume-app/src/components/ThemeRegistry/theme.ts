@@ -1,5 +1,7 @@
 import { Roboto } from 'next/font/google';
 import { Shadows, createTheme, responsiveFontSizes } from '@mui/material/styles';
+import { darkScrollbar } from '@mui/material';
+import { grey } from "@mui/material/colors";
 
 const roboto = Roboto({
   weight: ['300', '400', '500', '700'],
@@ -8,55 +10,69 @@ const roboto = Roboto({
 });
 
 export const lightTheme = responsiveFontSizes(createTheme({
-    palette: {
-      mode: 'light',
-      primary: {
-          main: '#FF6A38'
-      },
-      secondary: {
-        main: '#AE887D'
-      }
+  palette: {
+    mode: 'light',
+    primary: {
+      main: '#FF6A38'
     },
-    typography: {
-      fontFamily: roboto.style.fontFamily,
-    },
-    components: {
-      MuiAlert: {
-        styleOverrides: {
-          root: ({ ownerState }) => ({
-            ...(ownerState.severity === 'info' && {
-              backgroundColor: '#60a5fa',
-            }),
+    secondary: {
+      main: '#AE887D'
+    }
+  },
+  typography: {
+    fontFamily: roboto.style.fontFamily,
+  },
+  components: {
+    MuiAlert: {
+      styleOverrides: {
+        root: ({ ownerState }) => ({
+          ...(ownerState.severity === 'info' && {
+            backgroundColor: '#60a5fa',
           }),
-        },
+        }),
       },
     },
-  }));
+  },
+}));
 
-  export const darkTheme = responsiveFontSizes(createTheme({
-    palette: {
-      mode: 'dark',
-      primary: {
-          main: '#FF6A38'
+export const darkTheme = responsiveFontSizes(createTheme({
+  palette: {
+    mode: 'dark',
+    primary: {
+      main: '#FF6A38'
+    },
+    secondary: {
+      main: '#AE887D'
+    }
+  },
+  shadows: Array(25).fill('none') as Shadows,
+  typography: {
+    fontFamily: roboto.style.fontFamily,
+  },
+  components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        html: {
+          ...darkScrollbar(
+            {
+              track: '#202022',
+              thumb: '#585859',
+              active: '#838384'
+            }
+          ),
+          scrollbarWidth: "thin"
+        }
       },
-      secondary: {
-        main: '#AE887D'
-      }
     },
-    shadows: Array(25).fill('none') as Shadows,
-    typography: {
-      fontFamily: roboto.style.fontFamily,
-    },
-    components: {
-      MuiAlert: {
-        styleOverrides: {
-          root: ({ ownerState }) => ({
-            ...(ownerState.severity === 'info' && {
-              backgroundColor: '#60a5fa',
-            }),
+    MuiAlert: {
+      styleOverrides: {
+        root: ({ ownerState }) => ({
+          ...(ownerState.severity === 'info' && {
+            backgroundColor: '#60a5fa',
           }),
-        },
+        }),
       },
     },
-  }));
+  },
+}));
 

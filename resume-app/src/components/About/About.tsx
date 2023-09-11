@@ -130,7 +130,7 @@ export default function About() {
                     </Box>
                 </Box>
 
-                <Spacer height={150} />
+                <Spacer height={100} />
 
                 <Box sx={{ display: 'flex' }}>
                     <Box sx={{ width: '50%', display: 'flex', justifyContent: 'center' }}>
