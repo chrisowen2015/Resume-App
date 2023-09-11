@@ -21,7 +21,27 @@ export default function ContactForm() {
             ...formBody,
             [name]: value,
         });
+    }
 
+    async function handleSubmit( event: React.MouseEvent<HTMLButtonElement>) {
+        event.preventDefault();
+        const data = formBody;
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json'},
+                body: JSON.stringify(data),
+            });
+            if (!response.ok) {
+                throw new Error(`Invalid response: ${response.status}`);
+            }
+            alert(response.toString());
+            console.log(response);
+            //alert('Thanks for contacting us, we will get back to you soon!');
+        } catch (err) {
+            console.error(err);
+            alert("We can't submit the form, try again later?");
+        }
     }
 
     return (
@@ -54,7 +74,7 @@ export default function ContactForm() {
                     }
                 }}>
                     <Tooltip title="Send Message" placement="top" >
-                        <Button variant="contained" color="primary" sx={{ p: '1em 1em 1em 1.5em', borderRadius: 10 }} >
+                        <Button variant="contained" color="primary" sx={{ p: '1em 1em 1em 1.5em', borderRadius: 10 }} onClick={handleSubmit} >
                             <Typography variant="h6">
                                 Send Message &nbsp;
                             </Typography>
