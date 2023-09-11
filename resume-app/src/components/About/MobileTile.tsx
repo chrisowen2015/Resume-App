@@ -3,8 +3,16 @@ import { HorizontalRule } from '@mui/icons-material';
 
 export default function MobileTile({ header, text }: { header: string, text: string }) {
     return (
-        <Box sx={{ width: '100%', display:'flex', justifyContent: 'space-evenly' }}>
-            <Paper sx={{ padding: '1em', borderRadius: 5, flexGrow: 1 }} elevation={2}>
+        <Box sx={{ width: '100%', height: '163px', display: 'flex', }}>
+            <Paper sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-evenly',
+                padding: '1em',
+                borderRadius: 5,
+                flexGrow: 1
+            }}
+                elevation={2}>
                 <Typography variant="h2" color="primary" fontWeight={800}>
                     {header}
                 </Typography>
