@@ -42,6 +42,9 @@ export default function MobileHome() {
                             <Download fontSize="large" />
                         </Fab>
                     </Box>
+
+                    <Spacer height={60} />
+                    <Spacer height={40} />
                 </Box>
             </Box>
         </>

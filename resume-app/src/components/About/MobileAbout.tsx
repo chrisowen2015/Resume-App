@@ -34,7 +34,7 @@ export default function MobileAbout() {
 
                 <Box sx={{ display: 'flex', justifyContent: 'center' }} >
                     <Typography variant="h1" fontWeight={800}>
-                        ABOUT &nbsp;
+                        ABOUT&nbsp;
                     </Typography>
                     <Typography color="primary" variant="h1" fontWeight={800} >
                         ME
@@ -96,7 +96,7 @@ export default function MobileAbout() {
                                 </Typography>
                             </Box>
 
-                            <Box sx={{ width: '50%' }}>
+                            <Box sx={{ width: 'min-content' }}>
                                 <Typography variant="h6" align="center" sx={{ color: "rgba(255, 255, 255, 0.5)" }} >
                                     Email: &nbsp;
                                 </Typography>
