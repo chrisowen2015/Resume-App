@@ -33,7 +33,7 @@ export default function NavButtons() {
                     <Fab href="/about" sx={{ margin: 3, backgroundColor: (value == 1 ? theme.palette.primary.main : theme.palette.action.disabled) }}>
                         <Person fontSize="large" />
                     </Fab>
-                    <Fab href="/" sx={{ backgroundColor: (value == 2 ? theme.palette.primary.main : theme.palette.action.disabled) }}>
+                    <Fab href="/contact" sx={{ backgroundColor: (value == 2 ? theme.palette.primary.main : theme.palette.action.disabled) }}>
                         <Mail fontSize="large" />
                     </Fab>
                 </Box>
@@ -48,18 +48,19 @@ export default function NavButtons() {
                     xl: 'none',
                 }
             }}>
-                <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} elevation={20}>
+                <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }}>
                     <BottomNavigation
                         showLabels
                         value={value}
                         onChange={(event, newValue) => {
                             setValue(newValue);
                         }}
-                        sx={{ paddingBottom: '1em' }}
+                        sx={{ padding: '1em' }}
+                        component={Paper}
                     >
                         <BottomNavigationAction label="Home" icon={<Home fontSize='large' />} href="/" />
                         <BottomNavigationAction label="About Me" icon={<Person fontSize='large' />} href="/about" />
-                        <BottomNavigationAction label="Contact Me" icon={<Mail fontSize='large' />} />
+                        <BottomNavigationAction label="Contact Me" icon={<Mail fontSize='large' />} href="/contact" />
                     </BottomNavigation>
                 </Paper>
             </Box>
