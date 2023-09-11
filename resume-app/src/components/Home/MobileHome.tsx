@@ -13,7 +13,7 @@ export default function MobileHome() {
                         height={300}
                         width={300}
                         priority
-                        style={{ borderRadius: '50%' }} />
+                        style={{ borderRadius: '50%', transform: 'rotate(10deg)' }} />
                 </div>
 
                 <Spacer height={40} />

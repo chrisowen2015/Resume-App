@@ -51,14 +51,14 @@ export default function Contact() {
                                 <Box sx={{ display: 'flex', alignItems: 'center' }}>
                                     <MapIcon color="primary" sx={{ marginRight: '15px', fontSize: 45 }} />
                                     <span>
-                                        <Typography variant="h6" sx={{ color: "" }}>
+                                        <Typography variant="h5" fontWeight={600} color="secondary">
                                             LOCATION
                                         </Typography>
 
                                         <Spacer height={10} />
 
-                                        <Typography variant="h6" sx={{}}>
-                                            Pasadena, California, USA
+                                        <Typography variant="h6" fontWeight={600} sx={{}}>
+                                            Los Angeles, California, USA
                                         </Typography>
                                     </span>
                                 </Box>
@@ -68,14 +68,14 @@ export default function Contact() {
                                 <Box sx={{ display: 'flex', alignItems: 'center' }}>
                                     <EmailIcon color="primary" sx={{ marginRight: '15px', fontSize: 45 }} />
                                     <span>
-                                        <Typography variant="h6" sx={{ color: "" }}>
-                                            LOCATION
+                                        <Typography variant="h5" fontWeight={600} color="secondary">
+                                            EMAIL ME 
                                         </Typography>
 
                                         <Spacer height={10} />
 
-                                        <Typography variant="h6" sx={{}}>
-                                            Pasadena, California, USA
+                                        <Typography variant="h6" fontWeight={600}  sx={{}}>
+                                            chrisowen2015@gmail.com
                                         </Typography>
                                     </span>
                                 </Box>

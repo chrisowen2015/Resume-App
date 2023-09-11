@@ -29,7 +29,13 @@ export default function RootLayout({
               xl: 'flex',
             },
           }}>
-            <Box sx={{ flexGrow: 1 }}>
+            <Box sx={{ flexGrow: 1, marginRight: {
+              xs: '0px',
+              sm: '0px',
+              md: '104px',
+              lg: '104px',
+              xl: '104px',
+            } }}>
               {children}
             </Box>
             <NavButtons />

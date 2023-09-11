@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Box, Fab, BottomNavigation, BottomNavigationAction, Paper } from "@mui/material";
+import { Box, Fab, BottomNavigation, BottomNavigationAction, Paper, Tooltip } from "@mui/material";
 import { Home } from "@mui/icons-material";
 import { Person } from "@mui/icons-material";
 import { Mail } from "@mui/icons-material";
@@ -27,15 +27,23 @@ export default function NavButtons() {
                 }
             }}>
                 <Box sx={{ height: '100vh', position: 'fixed', right: '10px', overflowY: 'auto', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-                    <Fab href="/" sx={{ backgroundColor: (value == 0 ? theme.palette.primary.main : theme.palette.action.disabled) }} >
-                        <Home fontSize="large" />
-                    </Fab>
-                    <Fab href="/about" sx={{ margin: 3, backgroundColor: (value == 1 ? theme.palette.primary.main : theme.palette.action.disabled) }}>
-                        <Person fontSize="large" />
-                    </Fab>
-                    <Fab href="/contact" sx={{ backgroundColor: (value == 2 ? theme.palette.primary.main : theme.palette.action.disabled) }}>
-                        <Mail fontSize="large" />
-                    </Fab>
+                    <Tooltip title="Home" placement="left">
+                        <Fab href="/" sx={{ backgroundColor: (value == 0 ? theme.palette.primary.main : theme.palette.action.disabled) }} >
+                            <Home fontSize="large" />
+                        </Fab>
+                    </Tooltip>
+
+                    <Tooltip title="About Me" placement="left">
+                        <Fab href="/about" sx={{ margin: 3, backgroundColor: (value == 1 ? theme.palette.primary.main : theme.palette.action.disabled) }}>
+                            <Person fontSize="large" />
+                        </Fab>
+                    </Tooltip>
+
+                    <Tooltip title="Contact Me" placement="left">
+                        <Fab href="/contact" sx={{ backgroundColor: (value == 2 ? theme.palette.primary.main : theme.palette.action.disabled) }}>
+                            <Mail fontSize="large" />
+                        </Fab>
+                    </Tooltip>
                 </Box>
             </Box>
 

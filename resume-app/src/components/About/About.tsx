@@ -4,6 +4,7 @@ import Spacer from "../shared/spacer";
 import Tile from "@/components/About/Tile";
 import Employment from "./Employment";
 import Education from "./Education";
+import Image from 'next/image';
 
 const skills = [
     {
@@ -58,6 +59,17 @@ export default function About() {
                 }}>
                     <Box sx={{ width: '50%' }} >
                         <Box>
+
+                            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                <Image src="/images/chris-owen-mobile.jpeg"
+                                    alt="Chris Owen"
+                                    height={250}
+                                    width={250}
+                                    priority
+                                    style={{ borderRadius: '50%', transform: 'rotate(10deg)' }} />
+                            </div>
+                            <Spacer height={30} />
+
                             <Typography variant="h4" fontWeight={600} sx={{ textAlign: 'center' }} >
                                 Personal Information
                             </Typography>
@@ -154,12 +166,14 @@ export default function About() {
                         xl: '0 0 0 0',
                     }
                 }}>
-                    <Grid item md={6} lg={6} xl={6} >
+                    <Grid item md={6} lg={6} xl={6}  >
                         <Employment />
                     </Grid>
 
                     <Grid item md={6} lg={6} xl={6} >
-                        <Education />
+                        <Box sx={{ marginLeft: 5 }}>
+                            <Education />
+                        </Box>
                     </Grid>
                 </Grid>
 

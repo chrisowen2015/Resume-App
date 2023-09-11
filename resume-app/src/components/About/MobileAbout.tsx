@@ -56,7 +56,7 @@ export default function MobileAbout() {
                             height={250}
                             width={250}
                             priority
-                            style={{ borderRadius: '50%' }} />
+                            style={{ borderRadius: '50%', transform: 'rotate(10deg)' }} />
                     </div>
 
                     <Spacer height={30} />
