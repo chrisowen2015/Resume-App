@@ -194,6 +194,7 @@ export default function ContactForm() {
     }
 
     async function handleSubmit(event: React.MouseEvent<HTMLButtonElement>) {
+        // Need to figure out why loading state does not update
         setLoading((prevState) => { return true });
 
         const apiEndpoint = '/api/contact';
