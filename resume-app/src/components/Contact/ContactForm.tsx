@@ -1,16 +1,22 @@
 'use client';
 
-import { Box, Paper, TextField, Fab, Typography, Tooltip, Button } from '@mui/material';
+import { Box, Paper, TextField, Fab, Typography, Tooltip, Button, Snackbar, Alert } from '@mui/material';
+
 import Spacer from '@/components/shared/spacer';
 import { Send } from '@mui/icons-material';
 import { useState } from 'react';
-
 
 export default function ContactForm() {
     const [formBody, setFormBody] = useState({
         email: '',
         subject: '',
         message: '',
+    });
+
+    const [toast, setToast] = useState({
+        open: false,
+        message: '',
+        severity: '',
     });
 
     const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -23,29 +29,71 @@ export default function ContactForm() {
         });
     }
 
-    async function handleSubmit( event: React.MouseEvent<HTMLButtonElement>) {
+    async function handleSubmit(event: React.MouseEvent<HTMLButtonElement>) {
         event.preventDefault();
-        const data = formBody;
-        try {
-            const response = await fetch('/api/contact', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json'},
-                body: JSON.stringify(data),
+
+        const apiEndpoint = '/api/contact';
+
+        fetch(apiEndpoint, {
+            method: 'POST',
+            body: JSON.stringify(formBody),
+        })
+            .then((res) => res.json())
+            .then((response) => {
+                console.log(response);
+                if (!response.error) {
+                    setToast({
+                        message: 'Message sent successfully!',
+                        severity: 'success',
+                        open: true,
+                    });
+                    setFormBody({
+                        email: '',
+                        subject: '',
+                        message: '',
+                    });
+                } else {
+                    setToast({
+                        message: 'Message failed to send. Please try again.',
+                        severity: 'error',
+                        open: true,
+                    });
+                }
+            })
+            .catch((err) => {
+                setToast({
+                    message: 'Message failed to send. Please try again.',
+                    severity: 'error',
+                    open: true,
+                });
             });
-            if (!response.ok) {
-                throw new Error(`Invalid response: ${response.status}`);
-            }
-            alert(response.toString());
-            console.log(response);
-            //alert('Thanks for contacting us, we will get back to you soon!');
-        } catch (err) {
-            console.error(err);
-            alert("We can't submit the form, try again later?");
+    }
+
+    const handleCloseSnackbar = (event: React.SyntheticEvent | Event, reason: string) => {
+        if (reason === 'clickaway') {
+            return;
         }
+
+        setToast({
+            ...toast,
+            open: false,
+        });
+    };
+
+    const handleCloseToast = () => {
+        setToast({
+            ...toast,
+            open: false,
+        });
     }
 
     return (
         <>
+            <Snackbar anchorOrigin={{ vertical: 'top', horizontal: 'right' }} open={toast.open} autoHideDuration={6000} onClose={handleCloseSnackbar}>
+                <Alert variant='filled' onClose={handleCloseToast} severity={toast.severity == 'success' ? 'success' : 'error'} sx={{ width: '100%' }}>
+                    {toast.message}
+                </Alert>
+            </Snackbar>
             <Box sx={{
                 margin: {
                     sm: '0 1em 0 1em',
