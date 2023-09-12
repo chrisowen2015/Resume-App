@@ -1,16 +1,14 @@
 'use client';
 
-import { Box, Paper, TextField, Fab, Typography, Tooltip, Button, Snackbar, Alert } from '@mui/material';
+import { Box, TextField, Typography, Tooltip, Button, Snackbar, Alert } from '@mui/material';
 
 import Spacer from '@/components/shared/spacer';
 import { Send } from '@mui/icons-material';
 
 import { FocusEvent, useState, } from 'react';
-import { useTheme } from '@mui/material';
 
 export default function ContactForm() {
-    const theme = useTheme();
-
+    const [loading, setLoading] = useState(false);
     const [formBody, setFormBody] = useState({
         email: '',
         subject: '',
@@ -119,47 +117,64 @@ export default function ContactForm() {
         let valid = true;
 
         if (formBody.email.length == 0) {
-            setValidationMessages({
-                ...validationMessages,
-                email: 'Email is required.',
+
+            setValidationMessages((prevState) => {
+                return {
+                    ...prevState,
+                    email: 'Email is required.',
+                }
             });
-            setFormErrors({
-                ...formErrors,
-                email: true,
+            setFormErrors((prevState) => {
+                return {
+                    ...prevState,
+                    email: true,
+                }
             });
             valid = false;
         } else if (!formBody.email.includes('@')) {
-            setValidationMessages({
-                ...validationMessages,
-                email: 'Email is invalid.',
+            setValidationMessages((prevState) => {
+                return {
+                    ...prevState,
+                    email: 'Email is invalid.',
+                }
             });
-            setFormErrors({
-                ...formErrors,
-                email: true,
+            setFormErrors((prevState) => {
+                return {
+                    ...prevState,
+                    email: true,
+                }
             });
             valid = false;
         }
 
         if (formBody.subject.length == 0) {
-            setValidationMessages({
-                ...validationMessages,
-                subject: 'Subject is required.',
+            setValidationMessages((prevState) => {
+                return {
+                    ...prevState,
+                    subject: 'Subject is required.',
+                }
             });
-            setFormErrors({
-                ...formErrors,
-                subject: true,
+            setFormErrors((prevState) => {
+                return {
+                    ...prevState,
+                    subject: true,
+                }
             });
             valid = false;
         }
 
         if (formBody.message.length == 0) {
-            setValidationMessages({
-                ...validationMessages,
-                message: 'Message is required.',
+            setValidationMessages((prevState) => {
+                return {
+                    ...prevState,
+                    message: 'Message is required.',
+                }
             });
-            setFormErrors({
-                ...formErrors,
-                message: true,
+            setFormErrors((prevState) => {
+                return {
+                    ...prevState,
+                    message: true,
+                }
             });
             valid = false;
         }
@@ -179,11 +194,12 @@ export default function ContactForm() {
     }
 
     async function handleSubmit(event: React.MouseEvent<HTMLButtonElement>) {
-        event.preventDefault();
+        setLoading((prevState) => { return true });
 
         const apiEndpoint = '/api/contact';
 
         if (!validateAll()) {
+            setLoading((prevState) => { return false });
             return;
         } else {
             fetch(apiEndpoint, {
@@ -218,6 +234,7 @@ export default function ContactForm() {
                         open: true,
                     });
                 });
+            setLoading((prevState) => { return false });
         }
     }
 
@@ -274,7 +291,7 @@ export default function ContactForm() {
                     }
                 }}>
                     <Tooltip title="Send Message" placement="top" >
-                        <Button variant="contained" color="primary" sx={{ p: '1em 1em 1em 1.5em', borderRadius: 10 }} onClick={handleSubmit} >
+                        <Button disabled={loading} variant="contained" color="primary" sx={{ p: '1em 1em 1em 1.5em', borderRadius: 10 }} onClick={ async (event) => await handleSubmit(event)} >
                             <Typography variant="h6">
                                 Send Message &nbsp;
                             </Typography>
