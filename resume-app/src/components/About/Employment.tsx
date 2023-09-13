@@ -11,7 +11,7 @@ import Link from "next/link";
 
 const employmentHistory = [
     {
-        dates: "JAN 2023 - PRESENT",
+        dates: "FEB 2023 - PRESENT",
         title: "SENIOR SOFTWARE DEVELOPER",
         company: "CREATIVE NOTE",
         url: "http://www.creativenote.com/",
