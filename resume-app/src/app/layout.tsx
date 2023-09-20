@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import ThemeRegistry from '@/components/ThemeRegistry/ThemeRegistry';
 import { Box } from '@mui/material';
 import NavButtons from '@/components/Navigation/NavButtons';
+import { Analytics } from '@vercel/analytics/react';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,6 +19,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <title>Chris Owen</title>
+      </head>
       <body>
         <ThemeRegistry>
           <Box sx={{
@@ -37,6 +41,7 @@ export default function RootLayout({
               xl: '104px',
             } }}>
               {children}
+              <Analytics />
             </Box>
             <NavButtons />
           </Box>
