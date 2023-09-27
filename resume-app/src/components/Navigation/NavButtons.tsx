@@ -1,19 +1,25 @@
 'use client';
 
 import { useState } from 'react';
-import { Box, Fab, BottomNavigation, BottomNavigationAction, Paper, Tooltip } from "@mui/material";
+import { Box, Fab, BottomNavigation, BottomNavigationAction, Paper, Tooltip, Switch } from "@mui/material";
 import { Home } from "@mui/icons-material";
 import { Person } from "@mui/icons-material";
 import { Mail } from "@mui/icons-material";
+import { LightMode } from '@mui/icons-material';
+import { DarkMode } from '@mui/icons-material';
 
 import { useTheme } from '@mui/material';
 
 import { usePathname } from 'next/navigation';
 
-export default function NavButtons() {
+export default function NavButtons({ switchTheme, darkMode }: { switchTheme: any, darkMode: boolean }) {
     const pathName = usePathname();
     const [value, setValue] = useState(pathName === '/' ? 0 : pathName === '/about' ? 1 : 2);
     const theme = useTheme();
+
+    const handleToggle = (event: React.ChangeEvent<HTMLInputElement>) => {
+        switchTheme(!event.target.checked);
+    };
 
     return (
         <>
@@ -26,7 +32,7 @@ export default function NavButtons() {
                     xl: 'block',
                 }
             }}>
-                <Box sx={{ height: '100vh', position: 'fixed', right: '10px', overflowY: 'auto', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+                <Box sx={{ height: '100vh', position: 'fixed', right: '10px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
                     <Tooltip title="Home" placement="left">
                         <Fab href="/" sx={{ backgroundColor: (value == 0 ? theme.palette.primary.main : theme.palette.action.disabled) }} >
                             <Home fontSize="large" />
@@ -44,6 +50,13 @@ export default function NavButtons() {
                             <Mail fontSize="large" />
                         </Fab>
                     </Tooltip>
+
+                    <Tooltip title="Toggle Dark Mode" placement="bottom">
+                        <Switch checked={!darkMode} onChange={handleToggle} sx={{ m: 3 }}
+                            icon={<DarkMode sx={{ fontSize: 25, position: 'relative', top: '-3px' }} />}
+                            checkedIcon={<LightMode sx={{ fontSize: 25, position: 'relative', top: '-3px' }} />} />
+                    </Tooltip>
+
                 </Box>
             </Box>
 

@@ -7,13 +7,13 @@ import CssBaseline from '@mui/material/CssBaseline';
 import NextAppDirEmotionCacheProvider from './EmotionCache';
 import { lightTheme, darkTheme } from './theme';
 
-export default function ThemeRegistry({ children }: { children: React.ReactNode }) {
+export default function ThemeRegistry({ children, mode }: { children: React.ReactNode, mode: boolean }) {
   return (
     <NextAppDirEmotionCacheProvider options={{ key: 'mui' }}>
-        <ThemeProvider theme={darkTheme}>
-          <CssBaseline />
-          {children}
-        </ThemeProvider>
+      <ThemeProvider theme={mode ? darkTheme : lightTheme}>
+        <CssBaseline />
+        {children}
+      </ThemeProvider>
     </NextAppDirEmotionCacheProvider>
   );
 }
