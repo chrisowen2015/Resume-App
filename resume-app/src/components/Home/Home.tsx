@@ -12,7 +12,7 @@ export default function Home() {
     return (
         <>
             <Box sx={{ width: '100%', height: '100vh', display: 'flex', justifyContent: 'space-between', }}>
-                <div style={{ width: '40%', position: 'relative', margin: '50px 0 50px 50px' }}>
+                <div style={{ width: '40%', position: 'relative', margin: '50px' }}>
                     <Image src="/images/chris-owen.jpg"
                         alt="Chris Owen"
                         title="Chris Owen - Software Developer"
