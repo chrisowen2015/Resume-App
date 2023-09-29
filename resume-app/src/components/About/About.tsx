@@ -106,7 +106,7 @@ export default function About() {
                                         </Typography>
 
                                         <Typography variant="h6" >
-                                            Los Angeles, CA, USA
+                                            Pasadena, CA, USA
                                         </Typography>
                                     </Box>
 

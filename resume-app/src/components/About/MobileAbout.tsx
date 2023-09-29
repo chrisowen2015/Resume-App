@@ -79,7 +79,7 @@ export default function MobileAbout() {
                                 </Typography>
 
                                 <Typography variant="h6" align="center" >
-                                    Los Angeles, CA, USA
+                                    Pasadena, CA, USA
                                 </Typography>
                             </Box>
                         </Box>

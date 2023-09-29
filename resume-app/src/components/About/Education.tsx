@@ -5,12 +5,15 @@ import Experience from "@/components/shared/Experience";
 import Spacer from "@/components/shared/spacer";
 
 const educations = [
+    /*
+
     {
         dates: "2023",
         title: "AWS CERTIFIED DEVELOPER",
         company: "AMAZON WEB SERVICES",
         description: "AWS CERTIFIED DEVELOPER - ASSOCIATE",
     },
+    */
     {
         dates: "2022",
         title: "BACHELOR'S DEGREE",
