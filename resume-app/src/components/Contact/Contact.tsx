@@ -48,7 +48,7 @@ export default function Contact() {
 
                                 <Spacer height={40} />
 
-                                <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                                <Box sx={{ display: 'flex', alignItems: 'center', p: 1 }}>
                                     <MapIcon color="primary" sx={{ marginRight: '15px', fontSize: 45 }} />
                                     <span>
                                         <Typography variant="h5" fontWeight={600} color="secondary">
@@ -58,17 +58,17 @@ export default function Contact() {
                                         <Spacer height={10} />
 
                                         <Typography variant="h6" fontWeight={600} sx={{}}>
-                                            Los Angeles, California, USA
+                                            Pasadena, California, USA
                                         </Typography>
                                     </span>
                                 </Box>
 
                                 <Spacer height={40} />
 
-                                <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                                <Button sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', width: 'min-content' }} href="mailto:chrisowen2015@gmail.com" >
                                     <EmailIcon color="primary" sx={{ marginRight: '15px', fontSize: 45 }} />
                                     <span>
-                                        <Typography variant="h5" fontWeight={600} color="secondary">
+                                        <Typography align="left" variant="h5" fontWeight={600} color="secondary">
                                             EMAIL ME
                                         </Typography>
 
@@ -78,7 +78,7 @@ export default function Contact() {
                                             chrisowen2015@gmail.com
                                         </Typography>
                                     </span>
-                                </Box>
+                                </Button>
                             </Box>
                         </Grid>
 
