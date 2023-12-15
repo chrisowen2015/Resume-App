@@ -21,7 +21,7 @@ export default function NavButtons() {
                 display: {
                     xs: 'none',
                     sm: 'none',
-                    md: 'block',
+                    md: 'none',
                     lg: 'block',
                     xl: 'block',
                 }
@@ -51,7 +51,7 @@ export default function NavButtons() {
                 display: {
                     xs: 'block',
                     sm: 'block',
-                    md: 'none',
+                    md: 'block',
                     lg: 'none',
                     xl: 'none',
                 }

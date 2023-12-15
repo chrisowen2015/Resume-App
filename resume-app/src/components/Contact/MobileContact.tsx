@@ -7,8 +7,8 @@ import EmailIcon from '@mui/icons-material/Email';
 export default function MobileContact() {
     return (
         <>
-            <Box sx={{ padding: '3em 0em 0 0em' }}>
-
+            <Box>
+                <Spacer height={30} />
 
                 <Box sx={{ display: 'flex', justifyContent: 'center' }} >
                     <Typography variant="h1" fontWeight={800}>
@@ -37,7 +37,7 @@ export default function MobileContact() {
                     <Spacer height={40} />
 
                     <ContactForm />
-                    
+
                     <Spacer height={40} />
                     <Spacer height={60} />
 

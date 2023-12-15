@@ -28,7 +28,7 @@ const skills = [
 export default function MobileAbout() {
     return (
         <>
-            <Box sx={{}}>
+            <Box>
 
                 <Spacer height={30} />
 
@@ -61,53 +61,48 @@ export default function MobileAbout() {
 
                     <Spacer height={30} />
 
-                    <Box sx={{ padding: '10px' }}>
-                        <Box sx={{ width: '100%', display: 'flex', }}>
-                            <Box sx={{ width: '50%' }}>
-                                <Typography variant="h6" sx={{ color: "rgba(255, 255, 255, 0.5)" }} align="center" >
-                                    First Name: &nbsp;
-                                </Typography>
+                    <Grid container spacing={2}>
+                        <Grid item xs={5} sm={6}>
+                            <Typography variant="h6" sx={{ color: "rgba(255, 255, 255, 0.5)" }} align="center" >
+                                First Name: &nbsp;
+                            </Typography>
 
-                                <Typography variant="h6" align="center"  >
-                                    Christopher
-                                </Typography>
-                            </Box>
+                            <Typography variant="h6" align="center"  >
+                                Christopher
+                            </Typography>
+                        </Grid>
 
-                            <Box sx={{ width: '50%' }}>
-                                <Typography variant="h6" align="center" sx={{ color: "rgba(255, 255, 255, 0.5)" }} >
-                                    Location: &nbsp;
-                                </Typography>
+                        <Grid item xs={7} sm={6}>
+                            <Typography variant="h6" align="center" sx={{ color: "rgba(255, 255, 255, 0.5)" }} >
+                                Location: &nbsp;
+                            </Typography>
 
-                                <Typography variant="h6" align="center" >
-                                    Pasadena, CA, USA
-                                </Typography>
-                            </Box>
-                        </Box>
+                            <Typography variant="h6" align="center" >
+                                Pasadena, CA, USA
+                            </Typography>
+                        </Grid>
 
-                        <Spacer height={30} />
+                        <Grid item xs={5} sm={6}>
+                            <Typography variant="h6" align="center" sx={{ color: "rgba(255, 255, 255, 0.5)" }} >
+                                Last Name: &nbsp;
+                            </Typography>
 
-                        <Box sx={{ width: '100%', display: 'flex', }}>
-                            <Box sx={{ width: '50%' }}>
-                                <Typography variant="h6" align="center" sx={{ color: "rgba(255, 255, 255, 0.5)" }} >
-                                    Last Name: &nbsp;
-                                </Typography>
+                            <Typography variant="h6" align="center" >
+                                Owen
+                            </Typography>
+                        </Grid>
 
-                                <Typography variant="h6" align="center" >
-                                    Owen
-                                </Typography>
-                            </Box>
+                        <Grid item xs={7} sm={6}>
+                            <Typography variant="h6" align="center" sx={{ color: "rgba(255, 255, 255, 0.5)" }} >
+                                Email: &nbsp;
+                            </Typography>
 
-                            <Box sx={{ width: 'min-content' }}>
-                                <Typography variant="h6" align="center" sx={{ color: "rgba(255, 255, 255, 0.5)" }} >
-                                    Email: &nbsp;
-                                </Typography>
+                            <Typography variant="h6" align="center" fontSize={'1em'} >
+                                chrisowen2015@gmail.com
+                            </Typography>
+                        </Grid>
 
-                                <Typography variant="h6" align="center" fontSize={'1em'} >
-                                    chrisowen2015@gmail.com
-                                </Typography>
-                            </Box>
-                        </Box>
-                    </Box>
+                    </Grid>
 
                     <Spacer height={30} />
 

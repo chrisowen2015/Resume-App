@@ -9,7 +9,8 @@ export default function Page() {
         display: {
           xs: 'none',
           sm: 'none',
-          md: 'block',
+          md: 'none',
+          lg: 'block',
         }
       }}>
         {/* The desktop layout to be displayed on medium and larger devices */}
@@ -19,7 +20,7 @@ export default function Page() {
         display: {
           xs: 'block',
           sm: 'block',
-          md: 'none',
+          md: 'block',
         }
       }}>
         {/* The mobile layout to be displayed on smaller devices */}

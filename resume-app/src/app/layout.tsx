@@ -28,7 +28,7 @@ export default function RootLayout({
             display: {
               xs: 'block',
               sm: 'block',
-              md: 'flex',
+              md: 'block',
               lg: 'flex',
               xl: 'flex',
             },
@@ -36,7 +36,7 @@ export default function RootLayout({
             <Box sx={{ flexGrow: 1, marginRight: {
               xs: '0px',
               sm: '0px',
-              md: '104px',
+              md: '0px',
               lg: '104px',
               xl: '104px',
             } }}>
