@@ -24,13 +24,13 @@ const employmentHistory = [
         url: "https://www.burnsmcd.com/",
         description: "Responsible for developing client-facing web applications using Blazor, React and .NET Core. Set up and maintained databases during development and production. Worked with SCRUM teams to develop and deploy applications to Azure."
     },
-    {
-        dates: "MAY 2018 - AUG 2018",
-        title: "SOFTWARE DEVELOPER INTERN",
-        company: "DRMCNATTY & ASSOCIATES",
-        url: "https://www.drmcnatty.com/",
-        description: "Assisted with developing a web application using Ruby on Rails for a client. Developed a new employee-facing web application to improve intranet productivity.",
-    }
+    // {
+    //     dates: "MAY 2018 - AUG 2018",
+    //     title: "SOFTWARE DEVELOPER INTERN",
+    //     company: "DRMCNATTY & ASSOCIATES",
+    //     url: "https://www.drmcnatty.com/",
+    //     description: "Assisted with developing a web application using Ruby on Rails for a client. Developed a new employee-facing web application to improve intranet productivity.",
+    // }
 ]
 
 export default function Employment() {
