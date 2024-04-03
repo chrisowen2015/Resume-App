@@ -43,7 +43,7 @@ const projectExperience = [
         imgUrl: "/images/my-website.png",
         liveUrl: "https://www.chrisowen.me/",
         github: "https://github.com/chrisowen2015/Resume-App",
-        description: "A web app where CSUN community members can buy and sell used or new products to and from other CSUN community members. Integrated with PayPal for checkout and features useful for students, such as Textbook search tools.",
+        description: "A Next.js website that showcases my resume, projects, and basic information about me. The website features a contact form, my education and work history, and a list of my personal projects. The website is hosted on Vercel.",
         tools: ["Next.js", "React", "Frontend Development", "Nodemailer", "Vercel", "Material-UI",]
     },
     {
