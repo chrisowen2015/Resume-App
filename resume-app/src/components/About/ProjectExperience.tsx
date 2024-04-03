@@ -119,7 +119,7 @@ export default function ProjectExperience() {
             <Spacer height={20} />
 
             <Typography align="center">
-                Here are some projects I've worked on, along with the technologies I used to build them and links to their respective Github repositories.
+                Here are some projects I&apos;ve worked on, along with the technologies I used to build them and links to their respective Github repositories.
             </Typography>
 
             <Spacer height={40} />
