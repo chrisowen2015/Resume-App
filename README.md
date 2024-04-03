@@ -1,5 +1,7 @@
 # Chris Owen Resume Website
 
+![Chris Owen Logo](resume-app/src/app/favicon.ico)
+
 Hello and welcome to the Github Repository of my personal website! If you were redirected here from my website, thank you for taking the time to look at my Github projects!
 My website was built using Next.js 13 and using Typescript, and is a simple portfolio site for contacting me online and displaying my portfolio and credentials. 
 
