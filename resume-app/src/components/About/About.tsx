@@ -5,6 +5,7 @@ import Tile from "@/components/About/Tile";
 import Employment from "./Employment";
 import Education from "./Education";
 import Image from 'next/image';
+import ProjectExperience from "./ProjectExperience";
 
 const skills = [
     {
@@ -173,6 +174,12 @@ export default function About() {
                     <Grid item md={6} lg={6} xl={6} >
                         <Box sx={{ marginLeft: 5 }}>
                             <Education />
+                        </Box>
+                    </Grid>
+
+                    <Grid item md={12}>
+                        <Box sx={{ marginLeft: 5 }}>
+                            <ProjectExperience />
                         </Box>
                     </Grid>
                 </Grid>

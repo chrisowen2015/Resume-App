@@ -4,6 +4,7 @@ import Image from 'next/image';
 import MobileTile from "@/components/About/MobileTile";
 import Employment from "./Employment";
 import Education from "./Education";
+import ProjectExperience from "./ProjectExperience";
 
 const skills = [
     {
@@ -148,15 +149,13 @@ export default function MobileAbout() {
                         <Education />
                     </Box>
 
-
-
                     <Spacer height={30} />
 
+                    <ProjectExperience />
+
+                    <Spacer height={56} />
 
                 </Box>
-
-
-
             </Box>
         </>
     )

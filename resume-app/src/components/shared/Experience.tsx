@@ -21,7 +21,7 @@ export default function Experience({ dates, title, company, url, description }: 
                 <Chip label={dates} sx={{ width: 'min-content' }} />
                 <Box sx={{
                     position: 'relative',
-                    left: (url ? '-220px' : '-124px'),
+                    left: (url ? '-216px' : '-124px'),
                     top: '0px',
                     width: '45px',
                     height: '45px',

@@ -15,10 +15,11 @@ const educations = [
     },
     */
     {
-        dates: "2022",
+        dates: "Graduated May 2022",
         title: "BACHELOR'S DEGREE",
         company: "CSU NORTHRIDGE",
-        description: "BACHELOR'S OF SCIENCE IN COMPUTER SCIENCE",
+        url: "https://www.csun.edu/",
+        description: "Bachelor's of Science in Computer Science",
     }
 ]
 
@@ -27,8 +28,8 @@ export default function Education() {
     return (
         <Box sx={{ width: '100%', marginLeft: '1em' }} >
             {
-                educations.map((job, index) => (
-                    <Experience key={index} dates={job.dates} title={job.title} company={job.company} description={job.description} />
+                educations.map((education, index) => (
+                    <Experience key={index} dates={education.dates} title={education.title} company={education.company} url={education.url} description={education.description} />
                 ))
             }
         </Box>
