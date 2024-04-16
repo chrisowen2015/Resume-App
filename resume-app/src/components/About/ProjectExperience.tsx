@@ -13,7 +13,7 @@ import Image from "next/image";
 const projectExperience = [
     {
         title: "MasterPC",
-        imgUrl: "images/coming-soon-.jpg",
+        imgUrl: "images/masterpc.png",
         liveUrl: "https://victorious-river-0a26b4410.4.azurestaticapps.net",
         github: "https://github.com/chrisowen2015/WarmWave",
         description: "A website to plan a custom computer build and view computer hardware specifications. Features a compatibility checker, a build planner, and a large repository of computer hardware components.",
